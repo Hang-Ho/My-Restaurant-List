@@ -77,7 +77,7 @@ def add_res():
     rb4 = Radiobutton(root, text="No", variable=delivery, value="no", bg="light blue")
     rb4.grid(row=9, column=1)
 
-    submit_add_res_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_add_res_btn = Button(root, text="Submit", bg="pink", fg="black",
                                 command=lambda: submit_add_res(name.get().strip(), street_address.get().strip(),
                                                                city.get().strip(), state.get().strip(),
                                                                zipcode.get().strip(),
@@ -147,7 +147,7 @@ def add_rating():
     rating_label = Label(root, text="Enter your rating score (1-5):", bg="light blue")
     rating_label.grid(row=1, column=0)
 
-    submit_add_rating_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_add_rating_btn = Button(root, text="Submit", bg="pink", fg="black",
                                    command=lambda: submit_add_rating(name.get().strip(), rating.get()))
     submit_add_rating_btn.grid(row=3, column=0, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -210,7 +210,7 @@ def find_res_by_name():
     name_label = Label(root, text="Enter restaurant name:", bg="light blue")
     name_label.grid(row=0, column=0)
 
-    submit_find_res_by_name_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_find_res_by_name_btn = Button(root, text="Submit", bg="pink", fg="black",
                                          command=lambda: submit_find_res_by_name(name))
     submit_find_res_by_name_btn.grid(row=1, column=0, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -254,7 +254,7 @@ def find_res_by_cuisine():
     cuisine_label = Label(root, text="Enter cuisine:", bg="light blue")
     cuisine_label.grid(row=0, column=0)
 
-    submit_find_res_by_cuisine_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_find_res_by_cuisine_btn = Button(root, text="Submit", bg="pink", fg="black",
                                             command=lambda: submit_find_res_by_cuisine(cuisine))
     submit_find_res_by_cuisine_btn.grid(row=1, column=0, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -312,7 +312,7 @@ def find_res_by_zipcode():
     zipcode_label = Label(root, text="Enter your zipcode:", bg="light blue")
     zipcode_label.grid(row=0, column=0)
 
-    submit_find_res_by_zipcode_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_find_res_by_zipcode_btn = Button(root, text="Submit", bg="pink", fg="black",
                                             command=lambda: submit_find_res_by_zipcode(zipcode))
     submit_find_res_by_zipcode_btn.grid(row=1, column=0, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -372,7 +372,7 @@ def find_best_res():
     limit_label = Label(root, text="How many restaurant would you like to view?", bg="light blue")
     limit_label.grid(row=0, column=0, columnspan=2)
 
-    submit_find_best_res_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_find_best_res_btn = Button(root, text="Submit", bg="pink", fg="black",
                                       command=lambda: submit_find_best_res(limit))
     submit_find_best_res_btn.grid(row=2, column=0, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -493,7 +493,7 @@ def remove_res():
     name_label = Label(root, text="Restaurant name:", bg="light blue")
     name_label.grid(row=0, column=0)
 
-    submit_remove_res_btn = Button(root, text="Submit", bg="magenta", fg="white",
+    submit_remove_res_btn = Button(root, text="Submit", bg="pink", fg="black",
                                    command=lambda: submit_remove_res(name.get().strip()))
     submit_remove_res_btn.grid(row=1, column=0, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -545,51 +545,51 @@ def exit_window():
 
 # Main menu
 def display_menu():
-    add_res_btn = Button(root, text="Add new restaurant", bg="magenta", fg="white", command=add_res)
+    add_res_btn = Button(root, text="Add new restaurant", bg="pink", fg="black", command=add_res)
     add_res_btn.grid(row=1, column=0, columnspan=2, pady=10, padx=10, ipadx=130)
 
-    add_rating_btn = Button(root, text="Rate a restaurant", bg="magenta", fg="white", command=add_rating)
+    add_rating_btn = Button(root, text="Rate a restaurant", bg="pink", fg="black", command=add_rating)
     add_rating_btn.grid(row=2, column=0, columnspan=2, pady=10, padx=10, ipadx=136)
 
-    see_all_res_btn = Button(root, text="See all restaurants", bg="magenta", fg="white", command=see_all_res)
+    see_all_res_btn = Button(root, text="See all restaurants", bg="pink", fg="black", command=see_all_res)
     see_all_res_btn.grid(row=3, column=0, columnspan=2, pady=10, padx=10, ipadx=133)
 
-    find_res_btn = Button(root, text="Find restaurants", bg="magenta", fg="white", command=display_find_menu)
-    find_res_btn.grid(row=4, column=0, columnspan=2, pady=10, padx=10, ipadx=140)
+    find_res_btn = Button(root, text="Find restaurants", bg="pink", fg="black", command=display_find_menu)
+    find_res_btn.grid(row=4, column=0, columnspan=2, pady=10, padx=10, ipadx=136)
 
-    view_delivery_res_btn = Button(root, text="View restaurants have delivery service", bg="magenta", fg="white",
+    view_delivery_res_btn = Button(root, text="View restaurants have delivery service", bg="pink", fg="black",
                                    command=find_delivery_res)
-    view_delivery_res_btn.grid(row=6, column=0, columnspan=2, pady=10, padx=10, ipadx=76)
+    view_delivery_res_btn.grid(row=6, column=0, columnspan=2, pady=10, padx=10, ipadx=80)
 
-    view_curb_pickup_res_btn = Button(root, text="View restaurants have curbside pickup", bg="magenta", fg="white",
+    view_curb_pickup_res_btn = Button(root, text="View restaurants have curbside pickup", bg="pink", fg="black",
                                       command=find_curb_pickup_res)
     view_curb_pickup_res_btn.grid(row=7, column=0, columnspan=2, pady=10, padx=10, ipadx=75)
 
-    remove_res_btn = Button(root, text="Remove restaurant from list", bg="magenta", fg="white", command=remove_res)
+    remove_res_btn = Button(root, text="Remove restaurant from list", bg="pink", fg="black", command=remove_res)
     remove_res_btn.grid(row=5, column=0, columnspan=2, pady=10, padx=10, ipadx=104)
 
-    exit_btn = Button(root, text="Exit", bg="magenta", fg="white", command=exit_window)
-    exit_btn.grid(row=8, column=0, columnspan=2, pady=10, padx=10, ipadx=176)
+    exit_btn = Button(root, text="Exit", bg="pink", fg="black", command=exit_window)
+    exit_btn.grid(row=8, column=0, columnspan=2, pady=10, padx=10, ipadx=165)
 
 
 def display_find_menu():
     clear_window()
     return_btn()
 
-    find_res_by_name_btn = Button(root, text="Find restaurants by name", bg="magenta", fg="white",
+    find_res_by_name_btn = Button(root, text="Find restaurants by name", bg="pink", fg="black",
                                   command=find_res_by_name)
-    find_res_by_name_btn.grid(row=1, column=0, columnspan=2, pady=10, padx=10, ipadx=108)
+    find_res_by_name_btn.grid(row=1, column=0, columnspan=2, pady=10, padx=10, ipadx=113)
 
-    find_res_by_cuisine_btn = Button(root, text="Find restaurants by cuisine", bg="magenta", fg="white",
+    find_res_by_cuisine_btn = Button(root, text="Find restaurants by cuisine", bg="pink", fg="black",
                                      command=find_res_by_cuisine)
-    find_res_by_cuisine_btn.grid(row=2, column=0, columnspan=2, pady=10, padx=10, ipadx=105)
+    find_res_by_cuisine_btn.grid(row=2, column=0, columnspan=2, pady=10, padx=10, ipadx=110)
 
-    find_res_by_zipcode_btn = Button(root, text="Find near by restaurants", bg="magenta", fg="white",
+    find_res_by_zipcode_btn = Button(root, text="Find near by restaurants", bg="pink", fg="black",
                                      command=find_res_by_zipcode)
-    find_res_by_zipcode_btn.grid(row=3, column=0, columnspan=2, pady=10, padx=10, ipadx=110)
+    find_res_by_zipcode_btn.grid(row=3, column=0, columnspan=2, pady=10, padx=10, ipadx=115)
 
-    find_best_res_btn = Button(root, text="Find the best restaurant", bg="magenta", fg="white", command=find_best_res)
-    find_best_res_btn.grid(row=4, column=0, columnspan=2, pady=10, padx=10, ipadx=110)
+    find_best_res_btn = Button(root, text="Find the best restaurant", bg="pink", fg="black", command=find_best_res)
+    find_best_res_btn.grid(row=4, column=0, columnspan=2, pady=10, padx=10, ipadx=115)
 
 
 # Helper function to display result
@@ -634,7 +634,7 @@ def clear_window():
 
 # Helper function show exit button
 def display_exit(row):
-    exit_btn = Button(root, text="Exit", bg="magenta", fg="white",
+    exit_btn = Button(root, text="Exit", bg="pink", fg="black",
                       command=lambda: handle_exit())
     exit_btn.grid(row=row, column=1, columnspan=1, pady=10, padx=10, ipadx=50)
 
@@ -646,7 +646,7 @@ def handle_exit():
 
 # Helper function show return button
 def return_btn():
-    exit_btn = Button(root, text="Return", bg="magenta", fg="white",
+    exit_btn = Button(root, text="Return", bg="pink", fg="black",
                       command=lambda: handle_exit())
     exit_btn.grid(row=0, column=1, columnspan=2, pady=10, padx=10, ipadx=162)
 
