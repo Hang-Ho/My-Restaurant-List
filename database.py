@@ -392,8 +392,8 @@ def submit_find_best_res(limit):
         label = Label(root, text=text.get(), bg="light blue")
         label.grid(row=2, column=0, columnspan=3)
     else:
-        cur.execute("SELECT name, cuisine, street_address, city, state, zipcode, AVG(rating)"
-                    " FROM restaurantTB, ratingTB, cuisineTB"
+        cur.execute("SELECT name, street_address, city, state, zipcode, AVG(rating)"
+                    " FROM restaurantTB, ratingTB"
                     " WHERE restaurantTB.name = ratingTB.restaurant"
                     " GROUP BY name"
                     " ORDER BY AVG(rating)"
@@ -406,15 +406,13 @@ def submit_find_best_res(limit):
 
         data = {
             'Name': [],
-            'Cuisine': [],
             'Address': [],
             'Rating': []
         }
         for record in records:
             data['Name'].append(record[0])
-            data['Cuisine'].append(record[1])
-            data['Address'].append(record[2] + ', ' + record[3] + ', ' + record[4] + ', ' + record[5])
-            data['Rating'].append(record[6])
+            data['Address'].append(record[1] + ', ' + record[2] + ', ' + record[3] + ', ' + record[4])
+            data['Rating'].append(record[5])
         if len(records) == 0:
             display_no_result()
         else:
