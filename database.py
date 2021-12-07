@@ -565,7 +565,7 @@ def display_menu():
                                       command=find_curb_pickup_res)
     view_curb_pickup_res_btn.grid(row=7, column=0, columnspan=2, pady=10, padx=10, ipadx=75)
 
-    remove_res_btn = Button(root, text="Remove Restaurant from list", bg="magenta", fg="white", command=remove_res)
+    remove_res_btn = Button(root, text="Remove restaurant from list", bg="magenta", fg="white", command=remove_res)
     remove_res_btn.grid(row=5, column=0, columnspan=2, pady=10, padx=10, ipadx=104)
 
     exit_btn = Button(root, text="Exit", bg="magenta", fg="white", command=exit_window)
