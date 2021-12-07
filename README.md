@@ -1,5 +1,5 @@
 # My-Restaurant-List
-This project is using Python and SQLite to create a restaurant list application.
+This project is using Python, SQLite, Tkinter to create a restaurant list application.
 Users can add or remove restaurant form their list. Users can also find or rate restaurants.
 * Main menu:
 Add new restaurant:
